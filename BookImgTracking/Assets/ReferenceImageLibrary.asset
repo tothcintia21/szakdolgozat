@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5489473042158246956
+  m_GuidHigh: 5940606402243447173
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5744236522945586241
+      m_GuidHigh: 6245810663152220298
+    m_SerializedTextureGuid:
+      m_GuidLow: 7738517227012132729
+      m_GuidHigh: 7565324945771176392
+    m_Size: {x: 0.1, y: 0.100635596}
+    m_SpecifySize: 1
+    m_Name: Hiro_marker
+    m_Texture: {fileID: 2800000, guid: e44c8f79bc6a6b64c8a11793f46efd68, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4866214265210475338
+      m_GuidHigh: 10961395825358318262
+    m_SerializedTextureGuid:
+      m_GuidLow: 8652611756103338257
+      m_GuidHigh: 2297914081664592104
+    m_Size: {x: 0.15, y: 0.15}
+    m_SpecifySize: 1
+    m_Name: new_moon
+    m_Texture: {fileID: 2800000, guid: 75e88911408c7814e868fcb1aed4e31f, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5357028069016247392
+      m_GuidHigh: 18416802806766437270
+    m_SerializedTextureGuid:
+      m_GuidLow: 2811521056927632954
+      m_GuidHigh: 2026973634578356699
+    m_Size: {x: 0.15, y: 0.15}
+    m_SpecifySize: 1
+    m_Name: square
+    m_Texture: {fileID: 2800000, guid: 54b3ce3a87812704db192002c841211c, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4670999838347324180
+      m_GuidHigh: 8036597482176174211
+    m_SerializedTextureGuid:
+      m_GuidLow: 8630193133117369096
+      m_GuidHigh: 2720107163579706632
+    m_Size: {x: 0.15, y: 0.15}
+    m_SpecifySize: 1
+    m_Name: star
+    m_Texture: {fileID: 2800000, guid: 0a79eb089aee77c408ed29b40dc3bf25, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5377563446550863619
+      m_GuidHigh: 144055398364235426
+    m_SerializedTextureGuid:
+      m_GuidLow: 2235013307597527199
+      m_GuidHigh: 12406398575401519995
+    m_Size: {x: 0.15, y: 0.15}
+    m_SpecifySize: 1
+    m_Name: wave
+    m_Texture: {fileID: 2800000, guid: fb9f189f5cc21f047b4bb8bcc5612cac, type: 3}
