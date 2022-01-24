@@ -155,16 +155,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PrefabsList:
-  - imageGuid: efff2441-a0ae-4fb7-8af8-88d7b493ad56
-    imagePrefab: {fileID: 8859859463447705778, guid: 719994d4508f42944a166be7731e3b27, type: 3}
   - imageGuid: 86cf134a-4417-4388-b6aa-ee5c6db31e98
-    imagePrefab: {fileID: 5114840154762776955, guid: dcae07ffb0f9a4e46878c23fa9b85673, type: 3}
-  - imageGuid: 61829c60-fca5-4a57-9603-bb8b93a095ff
-    imagePrefab: {fileID: 633801749569463481, guid: 79c7c4581b4e8e247bc92cf9ae7f9f62, type: 3}
-  - imageGuid: de996b14-b99a-40d2-83d8-e88fd4ba876f
     imagePrefab: {fileID: 3268984709101648553, guid: 22277698afeae3947a75ba10e9253d03, type: 3}
-  - imageGuid: 8cca1f03-f176-4aa0-a246-7a1f9fc9ff01
+  - imageGuid: 61829c60-fca5-4a57-9603-bb8b93a095ff
+    imagePrefab: {fileID: 8859859463447705778, guid: 719994d4508f42944a166be7731e3b27, type: 3}
+  - imageGuid: de996b14-b99a-40d2-83d8-e88fd4ba876f
     imagePrefab: {fileID: 2357176262187714821, guid: e3e957aa1f6fa3b45b3e941fa9178352, type: 3}
+  - imageGuid: 8cca1f03-f176-4aa0-a246-7a1f9fc9ff01
+    imagePrefab: {fileID: 633801749569463481, guid: 79c7c4581b4e8e247bc92cf9ae7f9f62, type: 3}
   m_ImageLibrary: {fileID: 11400000, guid: 45f3d30a1c5b2fc4b95b628689116248, type: 2}
 --- !u!114 &363215779
 MonoBehaviour:
@@ -179,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedLibrary: {fileID: 11400000, guid: 45f3d30a1c5b2fc4b95b628689116248, type: 2}
-  m_MaxNumberOfMovingImages: 2
+  m_MaxNumberOfMovingImages: 4
   m_TrackedImagePrefab: {fileID: 0}
 --- !u!114 &363215780
 MonoBehaviour:
