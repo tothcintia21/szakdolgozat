@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7463281290775701752}
   - component: {fileID: 5100361775100823029}
   m_Layer: 0
-  m_Name: Cone
+  m_Name: moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

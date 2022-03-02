@@ -38,7 +38,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
         [HideInInspector]
         List<NamedPrefab> m_PrefabsList = new List<NamedPrefab>();
 
+        //tartalmazza az összes prefabot
         Dictionary<Guid, GameObject> m_PrefabsDictionary = new Dictionary<Guid, GameObject>();
+        //marker által megjelenített prefabot tartalmazza
         Dictionary<Guid, GameObject> m_Instantiated = new Dictionary<Guid, GameObject>();
         ARTrackedImageManager m_TrackedImageManager;
 
@@ -46,12 +48,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
         [Tooltip("Reference Image Library")]
         XRReferenceImageLibrary m_ImageLibrary;
 
-        /// <summary>
-        /// Get the <c>XRReferenceImageLibrary</c>
-        /// </summary>
+        //library beállítása
         public XRReferenceImageLibrary imageLibrary
         {
-   
+
             get => m_ImageLibrary;
             set => m_ImageLibrary = value;
         }
@@ -89,42 +89,70 @@ namespace UnityEngine.XR.ARFoundation.Samples
             m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
         }
 
+        //az alkalmazás mûködése alatt/közben folyamatosan újralefut a függvény - változások észlelése
         void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
         {
-            foreach (var trackedImage in eventArgs.added)
+            //Mindig az aktuálisan beolvasott trackedImg és referenceImg-t tartalmazza
+            //az eventArgs hossza mindig 1 - aktuális elemet tartalmazza
+            //ez a függvény minden egyes újonnan beolvasott markernél lefut
+
+            foreach (ARTrackedImage trackedImage in eventArgs.added)
             {
-                // Give the initial image a reasonable default scale
-                var minLocalScalar = Mathf.Min(trackedImage.size.x, trackedImage.size.y) / 2;
-                trackedImage.transform.localScale = new Vector3(minLocalScalar, minLocalScalar, minLocalScalar);
+                trackedImage.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 AssignPrefab(trackedImage);
+                setState(trackedImage);
+
+                Debug.Log("added reference img név: " + trackedImage.referenceImage.name);
+                Debug.Log("trackables count: " + m_TrackedImageManager.trackables.count);
+                Debug.Log("arSessionState: " + ARSession.state);
+            }
+
+            foreach (ARTrackedImage trackedImage in eventArgs.updated)
+            {
+                setState(trackedImage);
+            }
+
+
+            foreach (ARTrackedImage trackedImage in eventArgs.removed)
+            {
+                m_Instantiated[trackedImage.referenceImage.guid].SetActive(false);
             }
         }
 
         void AssignPrefab(ARTrackedImage trackedImage)
         {
-            Debug.Log(trackedImage);
-            if (m_PrefabsDictionary.TryGetValue(trackedImage.referenceImage.guid, out var prefab))
+            //m_Instantiated alapján jelenik meg a markeren a prefab!!
+            if (m_PrefabsDictionary.TryGetValue(trackedImage.referenceImage.guid, out var prefab)) {
                 m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
+            }
+
+            //m_instantieted tartalmazza az összes beolvasott reference image prefabját vagyis annak a klónját
+            //prefab -> aktuálisan megjelenített prefab neve
+            //CubeAndSphere(Clone) (UnityEngine.GameObject)
+            //star(Clone) -> instantiate klónoz
+        }
+
+        void setState(ARTrackedImage trackedImage)
+        {
+            m_Instantiated[trackedImage.referenceImage.guid].SetActive(true);
+
+            foreach (var kpv in m_Instantiated)
+            {
+                if (kpv.Key != trackedImage.referenceImage.guid)
+                {
+                    kpv.Value.SetActive(false);
+                }
+            }
         }
 
         public GameObject GetPrefabForReferenceImage(XRReferenceImage referenceImage)
             => m_PrefabsDictionary.TryGetValue(referenceImage.guid, out var prefab) ? prefab : null;
 
-        public void SetPrefabForReferenceImage(XRReferenceImage referenceImage, GameObject alternativePrefab)
-        {
-            m_PrefabsDictionary[referenceImage.guid] = alternativePrefab;
-            if (m_Instantiated.TryGetValue(referenceImage.guid, out var instantiatedPrefab))
-            {
-                m_Instantiated[referenceImage.guid] = Instantiate(alternativePrefab, instantiatedPrefab.transform.parent);
-                Destroy(instantiatedPrefab);
-            }
-        }
-
+//Unity prefab list megadása -> reference img és a hozzávaló prefab
+//updateli a listet amint változik a referenceImgLibrary
+//Unity Editor
 #if UNITY_EDITOR
-        /// <summary>
-        /// This customizes the inspector component and updates the prefab list when
-        /// the reference image library is changed.
-        /// </summary>
+       
         [CustomEditor(typeof(PrefabImagePairManager))]
         class PrefabImagePairManagerInspector : Editor
         {
@@ -150,20 +178,20 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
             public override void OnInspectorGUI()
             {
-                //customized inspector
+               
                 var behaviour = serializedObject.targetObject as PrefabImagePairManager;
 
                 serializedObject.Update();
-                using (new EditorGUI.DisabledScope(true))
+               using (new EditorGUI.DisabledScope(true))
                 {
                     EditorGUILayout.PropertyField(serializedObject.FindProperty("m_Script"));
                 }
 
-                var libraryProperty = serializedObject.FindProperty(nameof(m_ImageLibrary));
-                EditorGUILayout.PropertyField(libraryProperty);
+               var libraryProperty = serializedObject.FindProperty(nameof(m_ImageLibrary));
+               EditorGUILayout.PropertyField(libraryProperty);
                 var library = libraryProperty.objectReferenceValue as XRReferenceImageLibrary;
 
-                //check library changes
+               //ellenörzi hogy változott e library
                 if (HasLibraryChanged(library))
                 {
                     if (library)
@@ -171,14 +199,13 @@ namespace UnityEngine.XR.ARFoundation.Samples
                         var tempDictionary = new Dictionary<Guid, GameObject>();
                         foreach (var referenceImage in library)
                         {
-                           
                             tempDictionary.Add(referenceImage.guid, behaviour.GetPrefabForReferenceImage(referenceImage));
                         }
                         behaviour.m_PrefabsDictionary = tempDictionary;
                     }
                 }
 
-                // update current
+               //updatel
                 m_ReferenceImages.Clear();
                 if (library)
                 {
@@ -188,7 +215,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     }
                 }
 
-                //show prefab list
+                //prefab list
                 m_IsExpanded = EditorGUILayout.Foldout(m_IsExpanded, "Prefab List");
                 if (m_IsExpanded)
                 {
@@ -197,10 +224,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
                         EditorGUI.BeginChangeCheck();
 
                         var tempDictionary = new Dictionary<Guid, GameObject>();
-                        
                         foreach (var image in library)
                         {
-                          
+
                             var prefab = (GameObject)EditorGUILayout.ObjectField(image.name, behaviour.m_PrefabsDictionary[image.guid], typeof(GameObject), false);
                             tempDictionary.Add(image.guid, prefab);
 

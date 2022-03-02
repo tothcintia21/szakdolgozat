@@ -16,16 +16,6 @@ MonoBehaviour:
   m_GuidHigh: 5940606402243447173
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5744236522945586241
-      m_GuidHigh: 6245810663152220298
-    m_SerializedTextureGuid:
-      m_GuidLow: 7738517227012132729
-      m_GuidHigh: 7565324945771176392
-    m_Size: {x: 0.1, y: 0.100635596}
-    m_SpecifySize: 1
-    m_Name: Hiro_marker
-    m_Texture: {fileID: 2800000, guid: e44c8f79bc6a6b64c8a11793f46efd68, type: 3}
-  - m_SerializedGuid:
       m_GuidLow: 4866214265210475338
       m_GuidHigh: 10961395825358318262
     m_SerializedTextureGuid:
@@ -33,7 +23,7 @@ MonoBehaviour:
       m_GuidHigh: 2297914081664592104
     m_Size: {x: 0.15, y: 0.15}
     m_SpecifySize: 1
-    m_Name: new_moon
+    m_Name: moon
     m_Texture: {fileID: 2800000, guid: 75e88911408c7814e868fcb1aed4e31f, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5357028069016247392

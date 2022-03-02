@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7331496683871406822}
   - component: {fileID: 4501655694789720019}
   m_Layer: 0
-  m_Name: Torus
+  m_Name: star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
