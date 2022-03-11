@@ -60,7 +60,6 @@ public class TrackedImgManager : MonoBehaviour
 
         foreach (ARTrackedImage trackedImage in eventArgs.removed)
         {
-            Debug.Log("removed");
             arObjects[trackedImage.name].SetActive(false);
         }
     }
@@ -69,8 +68,6 @@ public class TrackedImgManager : MonoBehaviour
     {
         // Assign and Place Game Object
         AssignGameObject(trackedImage.referenceImage.name, trackedImage.transform.position);
-
-        Debug.Log($"trackedImage.referenceImage.name: {trackedImage.referenceImage.name}");
     }
 
     void AssignGameObject(string name, Vector3 newPosition)
@@ -83,7 +80,6 @@ public class TrackedImgManager : MonoBehaviour
             goARObject.transform.localScale = scaleFactor;
             foreach (GameObject go in arObjects.Values)
             {
-                Debug.Log($"Go in arObjects.Values: {go.name}");
                 if (go.name != name)
                 {
                     go.SetActive(false);

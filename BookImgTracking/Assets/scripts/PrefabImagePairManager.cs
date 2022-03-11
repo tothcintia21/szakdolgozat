@@ -43,6 +43,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         //marker által megjelenített prefabot tartalmazza
         Dictionary<Guid, GameObject> m_Instantiated = new Dictionary<Guid, GameObject>();
         ARTrackedImageManager m_TrackedImageManager;
+        private Vector3 scaleFactor = new Vector3(0.1f, 0.1f, 0.1f);
 
         [SerializeField]
         [Tooltip("Reference Image Library")]
@@ -92,19 +93,14 @@ namespace UnityEngine.XR.ARFoundation.Samples
         //az alkalmazás mûködése alatt/közben folyamatosan újralefut a függvény - változások észlelése
         void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
         {
+
             //Mindig az aktuálisan beolvasott trackedImg és referenceImg-t tartalmazza
             //az eventArgs hossza mindig 1 - aktuális elemet tartalmazza
             //ez a függvény minden egyes újonnan beolvasott markernél lefut
 
             foreach (ARTrackedImage trackedImage in eventArgs.added)
             {
-                trackedImage.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                 AssignPrefab(trackedImage);
-                setState(trackedImage);
-
-                Debug.Log("added reference img név: " + trackedImage.referenceImage.name);
-                Debug.Log("trackables count: " + m_TrackedImageManager.trackables.count);
-                Debug.Log("arSessionState: " + ARSession.state);
             }
 
             foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -123,7 +119,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             //m_Instantiated alapján jelenik meg a markeren a prefab!!
             if (m_PrefabsDictionary.TryGetValue(trackedImage.referenceImage.guid, out var prefab)) {
+                trackedImage.transform.localScale = scaleFactor;
                 m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
+                m_Instantiated[trackedImage.referenceImage.guid].SetActive(true);
             }
 
             //m_instantieted tartalmazza az összes beolvasott reference image prefabját vagyis annak a klónját
@@ -134,17 +132,22 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         void setState(ARTrackedImage trackedImage)
         {
-            m_Instantiated[trackedImage.referenceImage.guid].SetActive(true);
+            Guid img = trackedImage.referenceImage.guid;
 
             foreach (var kpv in m_Instantiated)
             {
-                if (kpv.Key != trackedImage.referenceImage.guid)
+                if (kpv.Key.CompareTo(img) < 0 || kpv.Key.CompareTo(img) > 0)
                 {
-                    kpv.Value.SetActive(false);
+                    m_Instantiated[kpv.Key].SetActive(false);
+                }
+                else {
+                    m_Instantiated[img].SetActive(true);
                 }
             }
         }
 
+
+//UNITY_EDITOR
         public GameObject GetPrefabForReferenceImage(XRReferenceImage referenceImage)
             => m_PrefabsDictionary.TryGetValue(referenceImage.guid, out var prefab) ? prefab : null;
 
