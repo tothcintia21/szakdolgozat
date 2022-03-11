@@ -100,12 +100,25 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
             foreach (ARTrackedImage trackedImage in eventArgs.added)
             {
+                Debug.Log("added trackedImg name: " + trackedImage.name);
                 AssignPrefab(trackedImage);
             }
 
             foreach (ARTrackedImage trackedImage in eventArgs.updated)
             {
-                setState(trackedImage);
+                //setState(trackedImage);
+
+                foreach (var kpv in m_Instantiated)
+                {
+                    if (trackedImage.trackingState == TrackingState.Tracking)
+                    {
+                        m_Instantiated[kpv.Key].SetActive(true);
+                    }
+                    else
+                    {
+                        m_Instantiated[kpv.Key].SetActive(false);
+                    }
+                }
             }
 
 
@@ -120,7 +133,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
             //m_Instantiated alapján jelenik meg a markeren a prefab!!
             if (m_PrefabsDictionary.TryGetValue(trackedImage.referenceImage.guid, out var prefab)) {
                 trackedImage.transform.localScale = scaleFactor;
-                m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
+
+                if (!m_Instantiated.ContainsKey(trackedImage.referenceImage.guid))
+                {
+                    m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
+                }
+                else {
+                    Debug.Log("szerepel");                
+                }
+                
                 m_Instantiated[trackedImage.referenceImage.guid].SetActive(true);
             }
 
@@ -141,7 +162,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     m_Instantiated[kpv.Key].SetActive(false);
                 }
                 else {
-                    m_Instantiated[img].SetActive(true);
+                    m_Instantiated[kpv.Key].SetActive(true);
                 }
             }
         }
