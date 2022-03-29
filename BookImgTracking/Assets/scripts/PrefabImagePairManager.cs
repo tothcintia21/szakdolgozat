@@ -44,6 +44,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         Dictionary<Guid, GameObject> m_Instantiated = new Dictionary<Guid, GameObject>();
         ARTrackedImageManager m_TrackedImageManager;
         private Vector3 scaleFactor = new Vector3(0.1f, 0.1f, 0.1f);
+        ARSession arSession;
 
         [SerializeField]
         [Tooltip("Reference Image Library")]
@@ -78,6 +79,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         void Awake()
         {
             m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
+            arSession = FindObjectOfType<ARSession>();
         }
 
         void OnEnable()
@@ -90,37 +92,32 @@ namespace UnityEngine.XR.ARFoundation.Samples
             m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
         }
 
-        //az alkalmazás mûködése alatt/közben folyamatosan újralefut a függvény - változások észlelése
         void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
         {
-
-            //Mindig az aktuálisan beolvasott trackedImg és referenceImg-t tartalmazza
-            //az eventArgs hossza mindig 1 - aktuális elemet tartalmazza
-            //ez a függvény minden egyes újonnan beolvasott markernél lefut
-
             foreach (ARTrackedImage trackedImage in eventArgs.added)
             {
-                Debug.Log("added trackedImg name: " + trackedImage.name);
                 AssignPrefab(trackedImage);
             }
 
             foreach (ARTrackedImage trackedImage in eventArgs.updated)
             {
-                //setState(trackedImage);
-
-                foreach (var kpv in m_Instantiated)
+                if (arSession != null)
                 {
-                    if (trackedImage.trackingState == TrackingState.Tracking)
-                    {
-                        m_Instantiated[kpv.Key].SetActive(true);
-                    }
-                    else
-                    {
-                        m_Instantiated[kpv.Key].SetActive(false);
+                    if (eventArgs.updated.Count > 1)
+                    {                         
+                        var trackedImg = trackedImage;
+                        resetARSession();
+                        AssignPrefab(trackedImg);
+
+                        //dict nem ürül ki, de nem is szaporodik fel benne a prefabok száma
+                        Debug.Log("Reset megtörtént! Inst. száma: " + m_Instantiated.Count); 
                     }
                 }
+                else
+                {
+                    Debug.LogError("ARSession is null!!");
+                }
             }
-
 
             foreach (ARTrackedImage trackedImage in eventArgs.removed)
             {
@@ -128,27 +125,27 @@ namespace UnityEngine.XR.ARFoundation.Samples
             }
         }
 
+        void resetARSession() {
+            arSession.Reset();
+        }
+
         void AssignPrefab(ARTrackedImage trackedImage)
         {
-            //m_Instantiated alapján jelenik meg a markeren a prefab!!
             if (m_PrefabsDictionary.TryGetValue(trackedImage.referenceImage.guid, out var prefab)) {
                 trackedImage.transform.localScale = scaleFactor;
 
-                if (!m_Instantiated.ContainsKey(trackedImage.referenceImage.guid))
-                {
-                    m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
-                }
-                else {
-                    Debug.Log("szerepel");                
-                }
-                
+                m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
                 m_Instantiated[trackedImage.referenceImage.guid].SetActive(true);
             }
 
-            //m_instantieted tartalmazza az összes beolvasott reference image prefabját vagyis annak a klónját
-            //prefab -> aktuálisan megjelenített prefab neve
-            //CubeAndSphere(Clone) (UnityEngine.GameObject)
-            //star(Clone) -> instantiate klónoz
+            //if (!m_Instantiated.ContainsKey(trackedImage.referenceImage.guid))
+            //{
+            //m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
+            //}
+            //else
+            //{
+            //Debug.Log("szerepel");
+            //}
         }
 
         void setState(ARTrackedImage trackedImage)
@@ -157,7 +154,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
             foreach (var kpv in m_Instantiated)
             {
-                if (kpv.Key.CompareTo(img) < 0 || kpv.Key.CompareTo(img) > 0)
+               
+                if (kpv.Key.CompareTo(img) != 0)
                 {
                     m_Instantiated[kpv.Key].SetActive(false);
                 }
