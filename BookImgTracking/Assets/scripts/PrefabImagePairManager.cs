@@ -50,6 +50,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
         [Tooltip("Reference Image Library")]
         XRReferenceImageLibrary m_ImageLibrary;
 
+        //Touch action
+        private Vector2 touchPosition = default;
+
+        [SerializeField]
+        PrefabState[] prefab;
+
+        [SerializeField]
+        private Camera arCamera;
+
         //library beállítása
         public XRReferenceImageLibrary imageLibrary
         {
@@ -76,10 +85,54 @@ namespace UnityEngine.XR.ARFoundation.Samples
             }
         }
 
+        void Update()
+        {
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.GetTouch(0);
+                touchPosition = touch.position;
+                
+                if (touch.phase == TouchPhase.Began)
+                {
+              
+                    Ray ray = arCamera.ScreenPointToRay(touch.position);
+                    RaycastHit hitObject;
+
+                    if (Physics.Raycast(ray, out hitObject))
+                    {
+                        GameObject gameObject = hitObject.collider.gameObject;
+                        PrefabState prefabState = hitObject.transform.GetComponent<PrefabState>();
+
+                        if (prefabState != null)
+                        {
+                            Debug.Log("nem null!");
+
+                            Guid key;
+
+                            foreach (var kpv in m_PrefabsDictionary)
+                            {
+                                if (kpv.Value.transform.Find(gameObject.name) != null)
+                                {
+                                   key = kpv.Key;
+                                   break;
+                                }
+                            }
+                            ChangeSelectedObject(prefabState, gameObject, key);
+                        }
+                        else
+                        {
+                            Debug.Log("null");
+                        }
+                    }
+                }
+            }
+        }
+
         void Awake()
         {
             m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
             arSession = FindObjectOfType<ARSession>();
+            arCamera = FindObjectOfType<Camera>();
         }
 
         void OnEnable()
@@ -108,9 +161,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
                         var trackedImg = trackedImage;
                         resetARSession();
                         AssignPrefab(trackedImg);
-
-                        //dict nem ürül ki, de nem is szaporodik fel benne a prefabok száma
-                        Debug.Log("Reset megtörtént! Inst. száma: " + m_Instantiated.Count); 
                     }
                 }
                 else
@@ -137,44 +187,50 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
                 m_Instantiated[trackedImage.referenceImage.guid].SetActive(true);
             }
-
-            //if (!m_Instantiated.ContainsKey(trackedImage.referenceImage.guid))
-            //{
-            //m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
-            //}
-            //else
-            //{
-            //Debug.Log("szerepel");
-            //}
         }
 
-        void setState(ARTrackedImage trackedImage)
+        void ChangeSelectedObject(PrefabState selected, GameObject gameObject, Guid key)
         {
-            Guid img = trackedImage.referenceImage.guid;
-
-            foreach (var kpv in m_Instantiated)
+            
+            if (key != null)
             {
-               
-                if (kpv.Key.CompareTo(img) != 0)
+                MeshRenderer objMesh = m_Instantiated[key].transform.Find(gameObject.name).GetComponent<MeshRenderer>();
+
+                if (selected.isSelected != true)
                 {
-                    m_Instantiated[kpv.Key].SetActive(false);
+                    selected.isSelected = true;
+                    objMesh.material.color = Color.yellow;
                 }
                 else {
-                    m_Instantiated[kpv.Key].SetActive(true);
+                    selected.isSelected = false;
+                    objMesh.material.color = selected.originalColor;
                 }
             }
+            else
+            {
+                Debug.Log("key null!!");
+            }
+            
         }
 
-
-//UNITY_EDITOR
+        //UNITY_EDITOR
         public GameObject GetPrefabForReferenceImage(XRReferenceImage referenceImage)
             => m_PrefabsDictionary.TryGetValue(referenceImage.guid, out var prefab) ? prefab : null;
+
+//else {
+//Instantieted neve:  obj5(Clone), gameObj neve:  wave -> el kéne érni hogy hozzájussunk a wave-hez !!!
+// gyerek számának lekérd: kpv.Value.transform.childCount
+// gameObject.transform.parent.gameObject.name -> parent elérése
+//Debug.Log("prefab dict gyerek számai:  " + kpv.Value.transform.childCount + ", gameObj parent neve:  " +  gameObject.transform.parent.gameObject.name);
+//Debug.Log("Find child: " + kpv.Value.transform.Find(gameObject.name).name + "   , gameObj name: " + gameObject.name);
+//Most parent alapján/vagy gyerek alapján össze kell hasonlítani és az instantieted-mesh-ére kell beállítani a  colort
+//}
 
 //Unity prefab list megadása -> reference img és a hozzávaló prefab
 //updateli a listet amint változik a referenceImgLibrary
 //Unity Editor
 #if UNITY_EDITOR
-       
+
         [CustomEditor(typeof(PrefabImagePairManager))]
         class PrefabImagePairManagerInspector : Editor
         {
