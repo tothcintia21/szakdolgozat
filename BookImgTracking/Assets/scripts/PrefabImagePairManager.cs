@@ -45,6 +45,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
         ARTrackedImageManager m_TrackedImageManager;
         private Vector3 scaleFactor = new Vector3(0.1f, 0.1f, 0.1f);
         ARSession arSession;
+        ARTrackedImage currentTrackedImage;
+        private float speed;
+        private Vector3 startPoint;
+        private Vector3 endPoint;
 
         [SerializeField]
         [Tooltip("Reference Image Library")]
@@ -87,6 +91,11 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         void Update()
         {
+            if (currentTrackedImage != null)
+            {
+                this.moveObjects(currentTrackedImage);
+            }
+
             if (Input.touchCount > 0)
             {
                 Touch touch = Input.GetTouch(0);
@@ -149,7 +158,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             foreach (ARTrackedImage trackedImage in eventArgs.added)
             {
+                currentTrackedImage = trackedImage;
                 AssignPrefab(trackedImage);
+                setPrefabPosition(trackedImage);
             }
 
             foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -198,8 +209,15 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                 if (selected.isSelected != true)
                 {
-                    selected.isSelected = true;
-                    objMesh.material.color = Color.yellow;
+                    if (selected.thisIsTheGoodSolution == true)
+                    {
+                        selected.isSelected = true;
+                        objMesh.material.color = Color.green;
+                    }
+                    else {
+                        selected.isSelected = true;
+                        objMesh.material.color = Color.red;
+                    }
                 }
                 else {
                     selected.isSelected = false;
@@ -211,6 +229,38 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 Debug.Log("key null!!");
             }
             
+        }
+
+
+        void moveObjects(ARTrackedImage trackedImage)
+        {
+            GameObject obj = m_Instantiated[trackedImage.referenceImage.guid];
+            int count = obj.transform.childCount;
+
+            for (int i = 0; i < count; i++)
+            {
+                GameObject child = obj.transform.GetChild(i).gameObject;
+                PrefabMovementParams childMovementParams = child.GetComponent<PrefabMovementParams>();
+                PrefabState childPrefabState = child.GetComponent<PrefabState>();
+
+                startPoint = childPrefabState.originalPosition;
+                endPoint = childMovementParams.endPos + childPrefabState.originalPosition; //end.pos = amennyivel szeretnenk elmozditani az eredeti poziciotol
+
+                child.transform.position = Vector3.Lerp(startPoint, endPoint, Mathf.PingPong(Time.time / childMovementParams.speed, 1));
+            }
+        }
+
+        void setPrefabPosition(ARTrackedImage trackedImage) {
+            GameObject obj = m_Instantiated[trackedImage.referenceImage.guid];
+
+            int count = obj.transform.childCount;
+
+            for (int i = 0; i < count; i++)
+            {
+                GameObject child = obj.transform.GetChild(i).gameObject;
+                PrefabState childPrefabs = child.GetComponent<PrefabState>();
+                childPrefabs.originalPosition = child.transform.position;
+            }
         }
 
         //UNITY_EDITOR
