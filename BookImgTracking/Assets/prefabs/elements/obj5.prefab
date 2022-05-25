@@ -46,6 +46,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4711208715938537054, guid: 792eb665d5649114faccd5b9dbbc194d, type: 3}
+--- !u!114 &6524496217905382778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3259436934466331038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac23a5efb4c716d418d8146b826d46b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  startPos: {x: 0, y: 3, z: 0}
+  endPos: {x: 0, y: 0, z: 0.1}
 --- !u!114 &8601101137046240943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +76,7 @@ MonoBehaviour:
   isSelected: 0
   thisIsTheGoodSolution: 1
   originalColor: {r: 0.9058824, g: 0, b: 0.054901965, a: 1}
+  originalPosition: {x: 0, y: 0, z: 0}
 --- !u!64 &4195956586778376719
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -90,6 +106,22 @@ MonoBehaviour:
   isSelected: 0
   thisIsTheGoodSolution: 0
   originalColor: {r: 0.9058824, g: 0.019607844, b: 0.03137255, a: 1}
+  originalPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &7933169881780792724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650449912780835646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac23a5efb4c716d418d8146b826d46b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0.1, y: 0, z: 0.1}
 --- !u!1001 &4207126829354692487
 PrefabInstance:
   m_ObjectHideFlags: 0

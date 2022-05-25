@@ -158,9 +158,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             foreach (ARTrackedImage trackedImage in eventArgs.added)
             {
-                currentTrackedImage = trackedImage;
                 AssignPrefab(trackedImage);
                 setPrefabPosition(trackedImage);
+                currentTrackedImage = trackedImage;
             }
 
             foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -234,6 +234,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         void moveObjects(ARTrackedImage trackedImage)
         {
+            Debug.Log("moveObj");
             GameObject obj = m_Instantiated[trackedImage.referenceImage.guid];
             int count = obj.transform.childCount;
 
@@ -245,12 +246,13 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                 startPoint = childPrefabState.originalPosition;
                 endPoint = childMovementParams.endPos + childPrefabState.originalPosition; //end.pos = amennyivel szeretnenk elmozditani az eredeti poziciotol
-
+                Debug.Log("start: " + startPoint);
                 child.transform.position = Vector3.Lerp(startPoint, endPoint, Mathf.PingPong(Time.time / childMovementParams.speed, 1));
             }
         }
 
         void setPrefabPosition(ARTrackedImage trackedImage) {
+            Debug.Log("setPos");
             GameObject obj = m_Instantiated[trackedImage.referenceImage.guid];
 
             int count = obj.transform.childCount;
