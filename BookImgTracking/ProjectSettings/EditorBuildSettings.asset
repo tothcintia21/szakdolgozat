@@ -11,6 +11,33 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/easy_slow_infront_wave.unity
+    guid: ad431e6659cf16d4b8791a1d770d9920
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/easy_normal_infront.unity
+    guid: ee67f37023086c0478adb87386fcc4bb
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/easy_fast_infront.unity
+    guid: cbdc0f409a8bc134092845123f757d3f
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/normal_slow_infront.unity
+    guid: d69da526d916c1c48aa2c3947d0c3049
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/normal_normal_infront.unity
+    guid: 8203cd29a1106c944ac110e2c892e58c
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/normal_fast_infront.unity
+    guid: 2cff5da1953473f4d9a9acb9758969dd
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/hard_slow_infront.unity
+    guid: 5b8aab9119224e34b98ffe98aa34c966
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/hard_normal_infront.unity
+    guid: 9b23b9b6da867bd46b335b36fcf3a297
+  - enabled: 1
+    path: Assets/Scenes/moon_scenes/hard_fast_infront.unity
+    guid: 0fefe5ba2e339c740a28d5c6368a8754
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 3def2d25aa053074b92d4109ed88785e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8555d123a2efbf248877333e7239cb24, type: 2}

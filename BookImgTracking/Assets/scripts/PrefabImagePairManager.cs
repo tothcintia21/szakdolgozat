@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.SceneManagement;
 
 namespace UnityEngine.XR.ARFoundation.Samples
 {
@@ -112,10 +113,20 @@ namespace UnityEngine.XR.ARFoundation.Samples
                         GameObject gameObject = hitObject.collider.gameObject;
                         PrefabState prefabState = hitObject.transform.GetComponent<PrefabState>();
 
+                        if (hitObject.collider.gameObject.name.Equals("questionmark"))
+                        {
+                            Debug.Log("kérdés");
+                        }
+
+                        if (hitObject.collider.gameObject.name.Equals("home_obj"))
+                        {
+                            SceneManager.LoadScene(0);
+                            resetARSession();
+                        }
+                     
+
                         if (prefabState != null)
                         {
-                            Debug.Log("nem null!");
-
                             Guid key;
 
                             foreach (var kpv in m_PrefabsDictionary)
