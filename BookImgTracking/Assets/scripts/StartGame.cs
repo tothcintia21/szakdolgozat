@@ -56,6 +56,42 @@ public class StartGame : MonoBehaviour
                 SceneManager.LoadScene(10);
                 Debug.Log("Load scene 10");
                 break;
+            case "Könnyû,Körben,Lassú":
+                SceneManager.LoadScene(11);
+                Debug.Log("Load scene 11");
+                break;
+            case "Könnyû,Körben,Normál":
+                SceneManager.LoadScene(12);
+                Debug.Log("Load scene 12");
+                break;
+            case "Könnyû,Körben,Gyors":
+                SceneManager.LoadScene(13);
+                Debug.Log("Load scene 13");
+                break;
+            case "Normál,Körben,Lassú":
+                SceneManager.LoadScene(14);
+                Debug.Log("Load scene 14");
+                break;
+            case "Normál,Körben,Normál":
+                SceneManager.LoadScene(15);
+                Debug.Log("Load scene 15");
+                break;
+            case "Normál,Körben,Gyors":
+                SceneManager.LoadScene(16);
+                Debug.Log("Load scene 16");
+                break;
+            case "Nehéz,Körben,Lassú":
+                SceneManager.LoadScene(17);
+                Debug.Log("Load scene 17");
+                break;
+            case "Nehéz,Körben,Normál":
+                SceneManager.LoadScene(18);
+                Debug.Log("Load scene 18");
+                break;
+            case "Nehéz,Körben,Gyors":
+                SceneManager.LoadScene(19);
+                Debug.Log("Load scene 19");
+                break;
             default:
                 SceneManager.LoadScene(1);
                 Debug.Log("Load scene 1");

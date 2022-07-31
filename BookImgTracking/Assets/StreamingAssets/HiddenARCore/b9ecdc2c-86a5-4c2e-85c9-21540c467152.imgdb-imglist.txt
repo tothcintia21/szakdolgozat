@@ -1,4 +1,0 @@
-86cf134a44174388b6aaee5c6db31e98|C:\Users\Public\Documents\Unity Projects\BookImgTracking\Assets\markers\moon.png|0.15
-61829c60fca54a579603bb8b93a095ff|C:\Users\Public\Documents\Unity Projects\BookImgTracking\Assets\markers\square.png|0.15
-de996b14b99a40d283d8e88fd4ba876f|C:\Users\Public\Documents\Unity Projects\BookImgTracking\Assets\markers\star.png|0.15
-8cca1f03f1764aa0a2467a1f9fc9ff01|C:\Users\Public\Documents\Unity Projects\BookImgTracking\Assets\markers\wave.png|0.15
