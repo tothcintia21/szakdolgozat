@@ -228,7 +228,13 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     else {
                         selected.isSelected = true;
                         objMesh.material.color = Color.red;
+
+
+                        StartCoroutine(this.SetBackTheColor(objMesh, selected));
                     }
+
+                    PlaySoundManager playSoundManager = FindObjectOfType(typeof(PlaySoundManager)) as PlaySoundManager; ; ;
+                    playSoundManager.playSound(selected.thisIsTheGoodSolution);
                 }
                 else {
                     selected.isSelected = false;
@@ -242,10 +248,16 @@ namespace UnityEngine.XR.ARFoundation.Samples
             
         }
 
+        IEnumerator<WaitForSeconds> SetBackTheColor(MeshRenderer objMesh, PrefabState selected) {
+            yield return new WaitForSeconds(5);
+           
+            selected.isSelected = false;
+            objMesh.material.color = selected.originalColor;
+        }
+
 
         void moveObjects(ARTrackedImage trackedImage)
         {
-            Debug.Log("moveObj");
             GameObject obj = m_Instantiated[trackedImage.referenceImage.guid];
             int count = obj.transform.childCount;
 
@@ -257,13 +269,12 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                 startPoint = childPrefabState.originalPosition;
                 endPoint = childMovementParams.endPos + childPrefabState.originalPosition; //end.pos = amennyivel szeretnenk elmozditani az eredeti poziciotol
-                Debug.Log("start: " + startPoint);
                 child.transform.position = Vector3.Lerp(startPoint, endPoint, Mathf.PingPong(Time.time / childMovementParams.speed, 1));
             }
         }
 
-        void setPrefabPosition(ARTrackedImage trackedImage) {
-            Debug.Log("setPos");
+        void setPrefabPosition(ARTrackedImage trackedImage) 
+        {
             GameObject obj = m_Instantiated[trackedImage.referenceImage.guid];
 
             int count = obj.transform.childCount;

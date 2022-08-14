@@ -65,6 +65,7 @@ public class StartGame : MonoBehaviour
                 Debug.Log("Load scene 12");
                 break;
             case "Könnyû,Körben,Gyors":
+                //SceneManager.LoadScene(13);
                 SceneManager.LoadScene(13);
                 Debug.Log("Load scene 13");
                 break;
