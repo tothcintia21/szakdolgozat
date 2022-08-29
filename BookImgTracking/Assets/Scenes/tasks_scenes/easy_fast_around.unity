@@ -1920,11 +1920,11 @@ MonoBehaviour:
   - imageGuid: 86cf134a-4417-4388-b6aa-ee5c6db31e98
     imagePrefab: {fileID: 5564582826667467056, guid: 7c30298263e4de946844b03ed78be67e, type: 3}
   - imageGuid: 61829c60-fca5-4a57-9603-bb8b93a095ff
-    imagePrefab: {fileID: 5131644104033801471, guid: 47ffadaeec0f3a545b3b13dbc8d67903, type: 3}
+    imagePrefab: {fileID: 6234330888934004440, guid: ca175b8a13551b14a9f63e0514ca2102, type: 3}
   - imageGuid: de996b14-b99a-40d2-83d8-e88fd4ba876f
-    imagePrefab: {fileID: 1014622725797484040, guid: 5c437115aa4aef14eb8e3c4171b10d94, type: 3}
+    imagePrefab: {fileID: 870525235281363798, guid: 247197bbe33208c40b68eb68503cd7b1, type: 3}
   - imageGuid: 8cca1f03-f176-4aa0-a246-7a1f9fc9ff01
-    imagePrefab: {fileID: 7299720628750045996, guid: cfedee83d62a4fa44ac762f1b4c05d66, type: 3}
+    imagePrefab: {fileID: 1703106628432060163, guid: b006df8c71025fa44905a8003444482b, type: 3}
   m_ImageLibrary: {fileID: 11400000, guid: 45f3d30a1c5b2fc4b95b628689116248, type: 2}
   prefab: []
   arCamera: {fileID: 0}

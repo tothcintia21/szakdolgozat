@@ -12,59 +12,62 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/easy_slow_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/easy_slow_infront.unity
     guid: f9fdb86326f5bf64080f032c8e29024f
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/easy_normal_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/easy_normal_infront.unity
     guid: 484e9b554cac70745b09c4a4bcdac977
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/easy_fast_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/easy_fast_infront.unity
     guid: ef41c5d4f23d02948b96b24b677342a2
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/normal_slow_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/normal_slow_infront.unity
     guid: bdb6ee44731ab35439ef6c728c847d65
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/normal_normal_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/normal_normal_infront.unity
     guid: be34b834a3e91e749ba4153524778c64
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/normal_fast_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/normal_fast_infront.unity
     guid: eff2af41f98815f4ca11175b1eae72a4
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/hard_slow_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/hard_slow_infront.unity
     guid: c9209510b2024e64aa79922fee63abc3
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/hard_normal_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/hard_normal_infront.unity
     guid: 7a995cde5e1a25f43b8b9282e3066796
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/hard_fast_infront_moon.unity
+    path: Assets/Scenes/tasks_scenes/hard_fast_infront.unity
     guid: 17311bd666dde9e4ab06679bd7c2a7ed
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/easy_slow_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/easy_slow_around.unity
     guid: 3ca0978d0040d404c941a8d7d6549cd1
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/easy_normal_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/easy_normal_around.unity
     guid: 792fda58865fc0e49bd835b2d1ada97a
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/easy_fast_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/easy_fast_around.unity
     guid: 90a45960b7ee56f44abb6d5c14624826
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/normal_slow_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/normal_slow_around.unity
     guid: 3c121006ee206f54fa2e44398ac8e63a
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/normal_normal_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/normal_normal_around.unity
     guid: a5371d07d6b0c3e47b792f4fa200a68d
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/normal_fast_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/normal_fast_around.unity
     guid: 3bb575e014e55e1468923d4f15120816
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/hard_slow_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/hard_slow_around.unity
     guid: 753488ce7ee46e04cafcef809e703b61
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/hard_normal_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/hard_normal_around.unity
     guid: 04531d225217f9b42959798c0d659d39
   - enabled: 1
-    path: Assets/Scenes/moon_scenes/hard_fast_around_moon.unity
+    path: Assets/Scenes/tasks_scenes/hard_fast_around.unity
     guid: 4cabfd727b88ae8449dd88a4885d9b5e
+  - enabled: 1
+    path: Assets/Scenes/IntroductionScene.unity
+    guid: 0e82c7ef9a326154bbc668566da89026
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 3def2d25aa053074b92d4109ed88785e, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 8555d123a2efbf248877333e7239cb24, type: 2}

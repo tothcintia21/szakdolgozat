@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: DemoReferenceImageLibrary 1
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5361626974747702764
+  m_GuidHigh: 7361881511916982919
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4825203982908848654
+      m_GuidHigh: 3509338971214838172
+    m_SerializedTextureGuid:
+      m_GuidLow: 8630188316534493443
+      m_GuidHigh: 17172133698558303963
+    m_Size: {x: 0.15, y: 0.15}
+    m_SpecifySize: 1
+    m_Name: demo
+    m_Texture: {fileID: 2800000, guid: 97c3d103968c77c4db1e15f29dac4fee, type: 3}
