@@ -46,7 +46,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1568975625174696229, guid: bdee61b8685cd5741a9425234a78ac3f, type: 3}
       propertyPath: m_Name
-      value: Table
+      value: Table_w_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 2492672859268907316, guid: bdee61b8685cd5741a9425234a78ac3f, type: 3}
       propertyPath: originalPosition.x
@@ -216,7 +216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2886297969334739469, guid: 26c55a3744e77504986441c75629eca1, type: 3}
       propertyPath: m_Name
-      value: Star_diamond
+      value: Star_diamond_w_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c55a3744e77504986441c75629eca1, type: 3}
@@ -234,7 +234,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1404779348424984880, guid: 2b53bc9e43872894dab53ea21e677787, type: 3}
       propertyPath: m_Name
-      value: Star_5
+      value: Star_5_w_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 3248615445641301808, guid: 2b53bc9e43872894dab53ea21e677787, type: 3}
       propertyPath: speed
@@ -404,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6357235929601618516, guid: 94603abaa50bd6042966afd960bd1a05, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Triangle_w_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94603abaa50bd6042966afd960bd1a05, type: 3}
@@ -494,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3365964023752640062, guid: a3cd1207172f987429ab755a630510be, type: 3}
       propertyPath: m_Name
-      value: Star_6
+      value: Star_6_w_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 6564674728147218789, guid: a3cd1207172f987429ab755a630510be, type: 3}
       propertyPath: originalPosition.x
@@ -608,7 +608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827790215296566920, guid: 5b6b116b2504a7b42bbadbd09581753e, type: 3}
       propertyPath: m_Name
-      value: Icecreame
+      value: Icecreame_w_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b6b116b2504a7b42bbadbd09581753e, type: 3}
@@ -654,7 +654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6124866128770230929, guid: 0a3ec2843e89b8647b11a2ac6a022368, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube_w_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 7820669152068740219, guid: 0a3ec2843e89b8647b11a2ac6a022368, type: 3}
       propertyPath: m_RootOrder

@@ -112,7 +112,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7049767555812287725, guid: de659572f1851cc4895655f3293b08ac, type: 3}
       propertyPath: m_Name
-      value: Airplane
+      value: Airplane_w_e_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de659572f1851cc4895655f3293b08ac, type: 3}
@@ -186,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7579602380483413633, guid: 2c3b893d6d4fb9343994b83523f07e17, type: 3}
       propertyPath: m_Name
-      value: Ducky
+      value: Ducky_w_e_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 7990152806643135484, guid: 2c3b893d6d4fb9343994b83523f07e17, type: 3}
       propertyPath: endPos.x
@@ -292,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8836571377977406546, guid: 29332b9bb3e967c418a41f8610a9f0fb, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Triangle_w_e_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29332b9bb3e967c418a41f8610a9f0fb, type: 3}
@@ -354,7 +354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5450266316095112252, guid: 6e86e8bc51be2df4aba9b2bfd4da6ea4, type: 3}
       propertyPath: m_Name
-      value: Icecreame
+      value: Icecreame_w_e_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 5463329160949431310, guid: 6e86e8bc51be2df4aba9b2bfd4da6ea4, type: 3}
       propertyPath: endPos.x
@@ -448,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1077414341764065403, guid: 08a52db05adda834796db76948069f1c, type: 3}
       propertyPath: m_Name
-      value: Lemon
+      value: Lemon_w_e_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 2850449729884044375, guid: 08a52db05adda834796db76948069f1c, type: 3}
       propertyPath: endPos.x

@@ -113,6 +113,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
                         GameObject gameObject = hitObject.collider.gameObject;
                         PrefabState prefabState = hitObject.transform.GetComponent<PrefabState>();
 
+                        Debug.Log("gameobject name" + gameObject.name);
+
                         if (hitObject.collider.gameObject.name.Equals("questionmark"))
                         {
                             Debug.Log("kérdés");
@@ -131,9 +133,13 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                             foreach (var kpv in m_PrefabsDictionary)
                             {
+                                Debug.Log("kpv value: " + kpv.Value);
+                                Debug.Log("kpv key: " + kpv.Key);
+                                Debug.Log("find: " + kpv.Value.transform.Find(gameObject.name));
                                 if (kpv.Value.transform.Find(gameObject.name) != null)
                                 {
                                    key = kpv.Key;
+                                   Debug.Log("the key: " + key);
                                    break;
                                 }
                             }

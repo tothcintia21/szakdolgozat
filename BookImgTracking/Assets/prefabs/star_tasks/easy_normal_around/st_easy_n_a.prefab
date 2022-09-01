@@ -52,7 +52,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1136889224112891119, guid: a3129bfdfdbd2664fafbc6488f589f0d, type: 3}
       propertyPath: m_Name
-      value: Car
+      value: Car_st_e_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 2622095673332848397, guid: a3129bfdfdbd2664fafbc6488f589f0d, type: 3}
       propertyPath: m_RootOrder
@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2797488318028270556, guid: 446c85f718fd2dc489a968aef33144ce, type: 3}
       propertyPath: m_Name
-      value: Monkey
+      value: Monkey_st_e_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 446c85f718fd2dc489a968aef33144ce, type: 3}
@@ -288,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3260001891093523949, guid: 473ae524e78137646a73f275408db02c, type: 3}
       propertyPath: m_Name
-      value: Orange
+      value: Orange_st_e_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 5132527440343291644, guid: 473ae524e78137646a73f275408db02c, type: 3}
       propertyPath: originalPosition.x
@@ -318,7 +318,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 271088067751382085, guid: e3b2af56d109dd64caa780da292973e9, type: 3}
       propertyPath: m_Name
-      value: Airplane
+      value: Airplane_st_e_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 3680845919011910522, guid: e3b2af56d109dd64caa780da292973e9, type: 3}
       propertyPath: originalPosition.x
@@ -412,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 809610582236822927, guid: c5f97b7e74ab57b4ca756db93da6a8a9, type: 3}
       propertyPath: m_Name
-      value: Star_5
+      value: Star_5_st_e_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 2583254984343188910, guid: c5f97b7e74ab57b4ca756db93da6a8a9, type: 3}
       propertyPath: m_RootOrder

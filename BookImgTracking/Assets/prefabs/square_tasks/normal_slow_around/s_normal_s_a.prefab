@@ -127,7 +127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7921216527107187146, guid: ba2fa1355b6c42a44a8ff872d1d0257d, type: 3}
       propertyPath: m_Name
-      value: Star_5
+      value: Star_5_sq_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba2fa1355b6c42a44a8ff872d1d0257d, type: 3}
@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2773725278682331537, guid: 27ce5d9525816d1469278eb2a9d96bd4, type: 3}
       propertyPath: m_Name
-      value: Table
+      value: Table_sq_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 3568784370485752005, guid: 27ce5d9525816d1469278eb2a9d96bd4, type: 3}
       propertyPath: speed
@@ -247,7 +247,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1992895806836293192, guid: 61f5ac5f9971d69408b27f003ac2cacd, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Triangle_sq_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 5861543040767053123, guid: 61f5ac5f9971d69408b27f003ac2cacd, type: 3}
       propertyPath: originalPosition.x
@@ -413,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8433390568512465490, guid: ea727b2b755bb59489283e747aa24643, type: 3}
       propertyPath: m_Name
-      value: Triangle_extr
+      value: Triangle_extr_sq_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea727b2b755bb59489283e747aa24643, type: 3}
@@ -507,7 +507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6917294808721193730, guid: d20c34f72b37eef4890ac2457409f17f, type: 3}
       propertyPath: m_Name
-      value: Diamond
+      value: Diamond_sq_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d20c34f72b37eef4890ac2457409f17f, type: 3}
@@ -597,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8749113706534535165, guid: 178c48fb4c18d1941b98b4720600dc88, type: 3}
       propertyPath: m_Name
-      value: Triangle_torus
+      value: Triangle_torus_sq_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 178c48fb4c18d1941b98b4720600dc88, type: 3}
@@ -615,7 +615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6491456091880653633, guid: 8e4172f1128a0184d98eb85e1bc726c5, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube_sq_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 7089005079043624363, guid: 8e4172f1128a0184d98eb85e1bc726c5, type: 3}
       propertyPath: m_RootOrder
@@ -705,7 +705,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1812141231958348991, guid: 6131bcfb10de4f449b0587419a64f93a, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Chest_sq_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 2400832817051540053, guid: 6131bcfb10de4f449b0587419a64f93a, type: 3}
       propertyPath: m_RootOrder

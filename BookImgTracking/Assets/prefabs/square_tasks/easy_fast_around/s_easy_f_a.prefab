@@ -44,7 +44,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1199746784369444414, guid: 1e6de5fb124469d4fb1b30f35ef686b4, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube_sq_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 2941175167918819540, guid: 1e6de5fb124469d4fb1b30f35ef686b4, type: 3}
       propertyPath: m_RootOrder
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4243843124783401778, guid: 381a3c3eadc2563458274983433fbbac, type: 3}
       propertyPath: m_Name
-      value: Star_4
+      value: Star_4_sq_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 5050044514558863516, guid: 381a3c3eadc2563458274983433fbbac, type: 3}
       propertyPath: speed
@@ -292,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8206908544557535494, guid: ed2b11c99480ab84aa9166a826bd4602, type: 3}
       propertyPath: m_Name
-      value: Pencil
+      value: Pencil_sq_e_f_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed2b11c99480ab84aa9166a826bd4602, type: 3}
@@ -310,7 +310,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1335914809715310237, guid: 73ab883e84369b5429aa9c4b0331d8cb, type: 3}
       propertyPath: m_Name
-      value: Icecreame
+      value: Icecreame_sq_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 2719899244450986321, guid: 73ab883e84369b5429aa9c4b0331d8cb, type: 3}
       propertyPath: speed
@@ -404,7 +404,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 56363092991512564, guid: 1796a68e96ee6154ba5819809d043bc0, type: 3}
       propertyPath: m_Name
-      value: Teddy
+      value: Teddy_sq_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 1610688002144075949, guid: 1796a68e96ee6154ba5819809d043bc0, type: 3}
       propertyPath: originalPosition.x

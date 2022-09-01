@@ -100,7 +100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3043675553291352269, guid: ecfc4f5993104b0489d153cd2e1c5150, type: 3}
       propertyPath: m_Name
-      value: Banana
+      value: Banana_m_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 6302295231282709119, guid: ecfc4f5993104b0489d153cd2e1c5150, type: 3}
       propertyPath: originalPosition.x
@@ -174,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5686830183077741610, guid: f6d2bfeac7ef647439f25afdebab27de, type: 3}
       propertyPath: m_Name
-      value: Teddy
+      value: Teddy_m_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 7596348200553686956, guid: f6d2bfeac7ef647439f25afdebab27de, type: 3}
       propertyPath: m_RootOrder
@@ -256,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1680482021664523688, guid: d992794d6be4863469f4c3554970cf12, type: 3}
       propertyPath: m_Name
-      value: Rubber_ducky
+      value: Rubber_ducky_m_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 3397184293665819458, guid: d992794d6be4863469f4c3554970cf12, type: 3}
       propertyPath: m_RootOrder
@@ -446,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8043747871352918990, guid: 97ace703a0eacbf4cb2adb38c8b8a65d, type: 3}
       propertyPath: m_Name
-      value: Airplane
+      value: Airplane_m_e_f_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ace703a0eacbf4cb2adb38c8b8a65d, type: 3}
@@ -484,11 +484,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2230570222399469281, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: startPos.z
-      value: -15
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 6032021812078014001, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: m_Name
-      value: Pencil
+      value: Pencil_m_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 7047039974197354864, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: originalPosition.x
@@ -496,7 +496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7047039974197354864, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: originalPosition.z
-      value: -15
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 7764618634916471003, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: m_RootOrder
@@ -504,15 +504,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7764618634916471003, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7764618634916471003, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7764618634916471003, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7764618634916471003, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -524,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7764618634916471003, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 7764618634916471003, guid: ec5e4cea014acb945bf28aa8e1cb40d4, type: 3}
       propertyPath: m_LocalRotation.w

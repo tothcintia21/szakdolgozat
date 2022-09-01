@@ -47,7 +47,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2115016336803019560, guid: 920e4bf1f590de348bf7c6216154c9fe, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Triangle_w_h_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 3863110053255817799, guid: 920e4bf1f590de348bf7c6216154c9fe, type: 3}
       propertyPath: speed
@@ -213,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429954424245840973, guid: aa26fb0502b41724ab79dd273eeea7fe, type: 3}
       propertyPath: m_Name
-      value: Star_8
+      value: Star_8_w_h_f_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa26fb0502b41724ab79dd273eeea7fe, type: 3}
@@ -251,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3006211595927934387, guid: b4164daeba4d7064ba6de4d7761f8740, type: 3}
       propertyPath: m_Name
-      value: Table
+      value: Table_w_h_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 5132884868299866498, guid: b4164daeba4d7064ba6de4d7761f8740, type: 3}
       propertyPath: m_RootOrder
@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6892259587083698265, guid: 313f22b485bee724ab33e47a2cc8fec9, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Chest_w_h_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 7480837355669409459, guid: 313f22b485bee724ab33e47a2cc8fec9, type: 3}
       propertyPath: m_RootOrder
@@ -419,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 248604784212355031, guid: 2ebfcaeaf1171934bb656bf61ee02716, type: 3}
       propertyPath: m_Name
-      value: Star_5
+      value: Star_5_w_h_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 3140971068956061686, guid: 2ebfcaeaf1171934bb656bf61ee02716, type: 3}
       propertyPath: m_RootOrder
@@ -501,7 +501,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1753447888275254507, guid: a81a0bb647d00f34b9c4d7d325410d66, type: 3}
       propertyPath: m_Name
-      value: Star_diamond
+      value: Star_diamond_w_h_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 3181690735147627967, guid: a81a0bb647d00f34b9c4d7d325410d66, type: 3}
       propertyPath: originalPosition.x
@@ -671,7 +671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7757183659163976512, guid: e8eb0ac699f1da34d8013af404e1a96c, type: 3}
       propertyPath: m_Name
-      value: Triangle_torus
+      value: Triangle_torus_w_h_f_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8eb0ac699f1da34d8013af404e1a96c, type: 3}
@@ -741,7 +741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4255524455537530847, guid: b702cf2e8c5236a438d22a2ad71e937a, type: 3}
       propertyPath: m_Name
-      value: Star_6
+      value: Star_6_w_h_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 4305090790145906435, guid: b702cf2e8c5236a438d22a2ad71e937a, type: 3}
       propertyPath: speed

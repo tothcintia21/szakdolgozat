@@ -46,7 +46,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1406133906945245350, guid: aa8207f58262cfd4e853a8141a9de6eb, type: 3}
       propertyPath: m_Name
-      value: Table
+      value: Table_w_n_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 7596331015169170016, guid: aa8207f58262cfd4e853a8141a9de6eb, type: 3}
       propertyPath: originalPosition.x
@@ -212,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7805544251682363703, guid: 1dbfb781b0cddb44c8583e5d5d870f78, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Triangle_w_n_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dbfb781b0cddb44c8583e5d5d870f78, type: 3}
@@ -286,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7596188517476909815, guid: 91721ab56c564a44085e1383d6ddd4e3, type: 3}
       propertyPath: m_Name
-      value: Icecreame
+      value: Icecreame_w_n_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 7701385063235247676, guid: 91721ab56c564a44085e1383d6ddd4e3, type: 3}
       propertyPath: endPos.x
@@ -388,7 +388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2681858209060194914, guid: 330efa937ad7a1c47b16e0683e633987, type: 3}
       propertyPath: m_Name
-      value: Star_diamond
+      value: Star_diamond_w_n_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 6281337123154559863, guid: 330efa937ad7a1c47b16e0683e633987, type: 3}
       propertyPath: originalPosition.x
@@ -462,7 +462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221802473427595275, guid: cc5d7bd1da5b74d4792c1d456ebe4249, type: 3}
       propertyPath: m_Name
-      value: Star_6
+      value: Star_6_w_n_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 5078383096406051374, guid: cc5d7bd1da5b74d4792c1d456ebe4249, type: 3}
       propertyPath: endPos.x
@@ -504,7 +504,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 145215178798417531, guid: ef63a5836162db44e99ae8ec9a3a4e3a, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube_w_n_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 2566359957145405621, guid: ef63a5836162db44e99ae8ec9a3a4e3a, type: 3}
       propertyPath: originalPosition.x
@@ -658,7 +658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8588781947102564797, guid: c92291dcb00fee046b329c606307d579, type: 3}
       propertyPath: m_Name
-      value: Star_5
+      value: Star_5_w_n_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92291dcb00fee046b329c606307d579, type: 3}

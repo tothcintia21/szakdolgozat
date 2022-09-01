@@ -109,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2443064772703648894, guid: b000134437d36fe44a7184658d1633d3, type: 3}
       propertyPath: m_Name
-      value: Star_5
+      value: Star_5_st_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 7498020885134408104, guid: b000134437d36fe44a7184658d1633d3, type: 3}
       propertyPath: originalPosition.x
@@ -179,7 +179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2374232039377124624, guid: addd0ad1570cac7409eed2e3ba7fc569, type: 3}
       propertyPath: m_Name
-      value: Star_8
+      value: Star_8_st_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 5316133085644364477, guid: addd0ad1570cac7409eed2e3ba7fc569, type: 3}
       propertyPath: speed
@@ -297,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6969026383032464889, guid: 4285669771b56fb4997e094c00519e3f, type: 3}
       propertyPath: m_Name
-      value: Star_10
+      value: Star_10_st_h_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4285669771b56fb4997e094c00519e3f, type: 3}
@@ -367,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8026541953281275552, guid: cf29f906d3a2721418c07560b17a5397, type: 3}
       propertyPath: m_Name
-      value: Star_4
+      value: Star_4_st_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 8470824100531543530, guid: cf29f906d3a2721418c07560b17a5397, type: 3}
       propertyPath: speed
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9056881353888152336, guid: fcc7d24f7e570334d8e93906c3728642, type: 3}
       propertyPath: m_Name
-      value: Star_6
+      value: Star_6_st_h_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcc7d24f7e570334d8e93906c3728642, type: 3}
@@ -547,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5531338130421078156, guid: 08824ccbfc5572948aa9cc089363ff78, type: 3}
       propertyPath: m_Name
-      value: Star_16
+      value: Star_16_st_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 7216598979688353965, guid: 08824ccbfc5572948aa9cc089363ff78, type: 3}
       propertyPath: m_RootOrder

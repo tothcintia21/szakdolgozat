@@ -47,7 +47,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1706811256809415891, guid: 7addf4185307ece4f9ffa56c7cecb790, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube_st_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 1930888908894583791, guid: 7addf4185307ece4f9ffa56c7cecb790, type: 3}
       propertyPath: speed
@@ -137,7 +137,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 563185286098874898, guid: d77143ab5a69969498d823b02f5ee800, type: 3}
       propertyPath: m_Name
-      value: Airplane
+      value: Airplane_st_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 2168730010813237176, guid: d77143ab5a69969498d823b02f5ee800, type: 3}
       propertyPath: originalPosition.x
@@ -283,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7613774195905141325, guid: 44d1ae398a6eea0499422bbe600a4ef0, type: 3}
       propertyPath: m_Name
-      value: Star_6
+      value: Star_6_st_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 8999145727526296778, guid: 44d1ae398a6eea0499422bbe600a4ef0, type: 3}
       propertyPath: speed
@@ -365,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3029388222077786159, guid: 0d840d695f5952f41a1d872b9a2048e1, type: 3}
       propertyPath: m_Name
-      value: Pencil
+      value: Pencil_st_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 3937230523677994843, guid: 0d840d695f5952f41a1d872b9a2048e1, type: 3}
       propertyPath: speed
@@ -431,7 +431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6881406247650785314, guid: 66e63b57b589c6b44b2083d12efb8129, type: 3}
       propertyPath: m_Name
-      value: Triangle_torus
+      value: Triangle_torus_st_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 7541673496821444621, guid: 66e63b57b589c6b44b2083d12efb8129, type: 3}
       propertyPath: originalPosition.x
@@ -577,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3352384462292111623, guid: 7cef27590293bb941b05f8d183a92ef8, type: 3}
       propertyPath: m_Name
-      value: Diamond_star
+      value: Diamond_star_st_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 6174434266957795827, guid: 7cef27590293bb941b05f8d183a92ef8, type: 3}
       propertyPath: originalPosition.x
@@ -607,7 +607,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1407825991659236132, guid: cb05db0e99118804884d2165335d91df, type: 3}
       propertyPath: m_Name
-      value: Star_4
+      value: Star_4_st_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 1916387955473640519, guid: cb05db0e99118804884d2165335d91df, type: 3}
       propertyPath: speed
@@ -729,7 +729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5253204372263068023, guid: e510d9a702046d44aa00548c0cdc3522, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Chest_st_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 6982557457725603039, guid: e510d9a702046d44aa00548c0cdc3522, type: 3}
       propertyPath: originalPosition.x

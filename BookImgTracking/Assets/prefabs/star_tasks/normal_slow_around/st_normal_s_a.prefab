@@ -111,7 +111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2667811923597256682, guid: b0d8fa03dcd1ae44ca95facd8dc8600a, type: 3}
       propertyPath: m_Name
-      value: Star_diamond
+      value: Star_diamond_st_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 3176951698252349049, guid: b0d8fa03dcd1ae44ca95facd8dc8600a, type: 3}
       propertyPath: originalPosition.x
@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223888494111618408, guid: 127c32ff79c57864b871be2eb221796b, type: 3}
       propertyPath: m_Name
-      value: Star_6
+      value: Star_6_st_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 6961222349346766153, guid: 127c32ff79c57864b871be2eb221796b, type: 3}
       propertyPath: m_RootOrder
@@ -227,7 +227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6275709107848731286, guid: 4136c07966c804347b0b442d6fdeb5b8, type: 3}
       propertyPath: m_Name
-      value: Triangle_torus
+      value: Triangle_torus_st_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 7324132385111918796, guid: 4136c07966c804347b0b442d6fdeb5b8, type: 3}
       propertyPath: m_RootOrder
@@ -389,7 +389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7427127268540315984, guid: 0fcab4e41e7e47e4084e55ee7d54972f, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Chest_st_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fcab4e41e7e47e4084e55ee7d54972f, type: 3}
@@ -439,7 +439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6653167563604934090, guid: c75d01a8a6a668540aebab5b7c128620, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube_st_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 7215805389727658784, guid: c75d01a8a6a668540aebab5b7c128620, type: 3}
       propertyPath: m_RootOrder
@@ -501,7 +501,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2418556161515634770, guid: 9c42b8ce068af1642ae93af25e63a187, type: 3}
       propertyPath: m_Name
-      value: Airplane
+      value: Airplane_st_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 3702283595250882170, guid: 9c42b8ce068af1642ae93af25e63a187, type: 3}
       propertyPath: originalPosition.x
@@ -663,7 +663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8019127271981705544, guid: 7106438c68521ce4881723e3d2fbb2d2, type: 3}
       propertyPath: m_Name
-      value: Pencil
+      value: Pencil_st_n_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7106438c68521ce4881723e3d2fbb2d2, type: 3}
@@ -681,7 +681,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1012230075618342075, guid: e6e44527c5f1d1c40b149cb9d074e300, type: 3}
       propertyPath: m_Name
-      value: Star_10
+      value: Star_10_st_n_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 2804029341009558682, guid: e6e44527c5f1d1c40b149cb9d074e300, type: 3}
       propertyPath: m_RootOrder

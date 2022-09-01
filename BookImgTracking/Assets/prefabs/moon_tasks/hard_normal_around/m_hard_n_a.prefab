@@ -92,7 +92,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 505435462817013753, guid: f238f7a714e2a4745ad943fc1d0f8d6b, type: 3}
       propertyPath: m_Name
-      value: Orange
+      value: Orange_m_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 4043400615266952284, guid: f238f7a714e2a4745ad943fc1d0f8d6b, type: 3}
       propertyPath: originalPosition.x
@@ -174,7 +174,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4263445377920451115, guid: 2a1a4a3ccd5c13d41a95eeb080d9cb18, type: 3}
       propertyPath: m_Name
-      value: Teddy
+      value: Teddy_m_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 6363208048433975581, guid: 2a1a4a3ccd5c13d41a95eeb080d9cb18, type: 3}
       propertyPath: originalPosition.x
@@ -224,7 +224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 674621181806295188, guid: 36170984861860c4bbfeeb2d79ed9157, type: 3}
       propertyPath: m_Name
-      value: Airplane
+      value: Airplane_m_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 1626600128802404533, guid: 36170984861860c4bbfeeb2d79ed9157, type: 3}
       propertyPath: endPos.x
@@ -398,7 +398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4364210920930242717, guid: 7d5ba21e32abfe94baea6f21be28835f, type: 3}
       propertyPath: m_Name
-      value: Banana
+      value: Banana_m_h_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d5ba21e32abfe94baea6f21be28835f, type: 3}
@@ -488,7 +488,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9150585739381541233, guid: 717d86dd61d8c604eb87f33a4efe8b91, type: 3}
       propertyPath: m_Name
-      value: Icecreame
+      value: Icecreame_m_h_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 717d86dd61d8c604eb87f33a4efe8b91, type: 3}
@@ -586,7 +586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2671549955504291695, guid: de684cc482c1ed743a3df19b234d34b1, type: 3}
       propertyPath: m_Name
-      value: Ducky
+      value: Ducky_m_h_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de684cc482c1ed743a3df19b234d34b1, type: 3}
@@ -604,7 +604,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1314264268124976609, guid: ae3513904a0e81f4ebf3b86fe7f10418, type: 3}
       propertyPath: m_Name
-      value: Lemon
+      value: Lemon_m_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 1453245916924542097, guid: ae3513904a0e81f4ebf3b86fe7f10418, type: 3}
       propertyPath: m_RootOrder
@@ -774,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2933065818397558566, guid: 0c2ad71090ae03d4ebaabc7045e0a3b0, type: 3}
       propertyPath: m_Name
-      value: Grape
+      value: Grape_m_h_n_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c2ad71090ae03d4ebaabc7045e0a3b0, type: 3}
@@ -856,7 +856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7061677391832882953, guid: b1301be87da1e1448a24330cb3b96072, type: 3}
       propertyPath: m_Name
-      value: Car
+      value: Car_m_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 7416904908295740213, guid: b1301be87da1e1448a24330cb3b96072, type: 3}
       propertyPath: originalPosition.x

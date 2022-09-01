@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4826179783822528155, guid: a129b862fb2dcce4393da5e6a32982b2, type: 3}
       propertyPath: m_Name
-      value: Star_8
+      value: Star_8_st_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 7647051424466912954, guid: a129b862fb2dcce4393da5e6a32982b2, type: 3}
       propertyPath: m_RootOrder
@@ -191,7 +191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7484333113364124957, guid: c558a1ca5ff27f4408d7d60706b643da, type: 3}
       propertyPath: m_Name
-      value: Star_10
+      value: Star_10_st_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 9075146970580393935, guid: c558a1ca5ff27f4408d7d60706b643da, type: 3}
       propertyPath: originalPosition.x
@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6456356867787797641, guid: aaf2590b896092c4995dc2bee4057ba2, type: 3}
       propertyPath: m_Name
-      value: Star_5
+      value: Star_5_st_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 8076660181794476169, guid: aaf2590b896092c4995dc2bee4057ba2, type: 3}
       propertyPath: endPos.x
@@ -371,7 +371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3240118996255101719, guid: 1859ecf6a954f46478028ff6f8858ca7, type: 3}
       propertyPath: m_Name
-      value: Star_4
+      value: Star_4_st_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 7499672065692196140, guid: 1859ecf6a954f46478028ff6f8858ca7, type: 3}
       propertyPath: endPos.x
@@ -449,7 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3305573997194104711, guid: 2cb11badb08b53842a79324c882c0460, type: 3}
       propertyPath: m_Name
-      value: Star_16
+      value: Star_16_st_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 7992404378694392497, guid: 2cb11badb08b53842a79324c882c0460, type: 3}
       propertyPath: originalPosition.x
@@ -559,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4564647042659753818, guid: 22cd9a77557897b48864db63c897a522, type: 3}
       propertyPath: m_Name
-      value: Star_6
+      value: Star_6_st_h_n_a
       objectReference: {fileID: 0}
     - target: {fileID: 8206543572467571264, guid: 22cd9a77557897b48864db63c897a522, type: 3}
       propertyPath: originalPosition.x

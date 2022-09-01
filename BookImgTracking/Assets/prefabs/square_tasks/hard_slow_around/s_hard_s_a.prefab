@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1583382476304516922, guid: 6b9b21159ec5a494d9bcf72acabf7eb2, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Chest_sq_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 3282615717764516304, guid: 6b9b21159ec5a494d9bcf72acabf7eb2, type: 3}
       propertyPath: m_RootOrder
@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4539522702266564002, guid: 2c5111c510dc194489f3541f9598cf53, type: 3}
       propertyPath: m_Name
-      value: Cube_small
+      value: Cube_small_sq_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 7121859683811551808, guid: 2c5111c510dc194489f3541f9598cf53, type: 3}
       propertyPath: speed
@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6620184170600144911, guid: 04041e12fa340e544906365da55c3903, type: 3}
       propertyPath: m_Name
-      value: Star_6
+      value: Star_6_sq_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 8172138516341306224, guid: 04041e12fa340e544906365da55c3903, type: 3}
       propertyPath: speed
@@ -312,7 +312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3445633558841034326, guid: 35a004cb4e5d0db4b9205e0a5976e099, type: 3}
       propertyPath: m_Name
-      value: Diamond
+      value: Diamond_sq_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 5024956443531887045, guid: 35a004cb4e5d0db4b9205e0a5976e099, type: 3}
       propertyPath: m_RootOrder
@@ -478,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8949713796906178951, guid: 7e310b7182fde0844bd82bc82ec9db65, type: 3}
       propertyPath: m_Name
-      value: Diamond_star
+      value: Diamond_star_sq_h_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e310b7182fde0844bd82bc82ec9db65, type: 3}
@@ -572,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8504534332641449744, guid: 085f003ede8d5164cae4a447e89196a3, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube_sq_h_s_a
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 085f003ede8d5164cae4a447e89196a3, type: 3}
@@ -598,7 +598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3769652141061600365, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Triangle_sq_h_s_a
       objectReference: {fileID: 0}
     - target: {fileID: 6579170855460250560, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: m_RootOrder

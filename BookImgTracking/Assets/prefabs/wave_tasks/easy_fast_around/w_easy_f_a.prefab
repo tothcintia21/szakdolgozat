@@ -68,7 +68,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2533566661944618362, guid: a114d684b8eeac443ae628a1fac9777a, type: 3}
       propertyPath: m_Name
-      value: Airplane
+      value: Airplane_w_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 5596451959272323403, guid: a114d684b8eeac443ae628a1fac9777a, type: 3}
       propertyPath: m_RootOrder
@@ -194,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4820485916708665034, guid: aa310e5c92dfea2468b7d8366a00722e, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Triangle_w_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 7012958455187338398, guid: aa310e5c92dfea2468b7d8366a00722e, type: 3}
       propertyPath: originalPosition.x
@@ -220,7 +220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 864544333233563407, guid: 6ff4f233135655140ab7bd6b4e47eea9, type: 3}
       propertyPath: m_Name
-      value: Ducky
+      value: Ducky_w_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 1801722646081693627, guid: 6ff4f233135655140ab7bd6b4e47eea9, type: 3}
       propertyPath: speed
@@ -314,7 +314,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3636706843263813494, guid: 8e2a9aa9a49c79843af105d8cabef97b, type: 3}
       propertyPath: m_Name
-      value: Lemon
+      value: Lemon_w_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 3778500907583000070, guid: 8e2a9aa9a49c79843af105d8cabef97b, type: 3}
       propertyPath: m_RootOrder
@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5830556347371603086, guid: adb0daec98adb1b4593849e81953a5a1, type: 3}
       propertyPath: m_Name
-      value: Icecreame
+      value: Icecreame_w_e_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 9050888782090685696, guid: adb0daec98adb1b4593849e81953a5a1, type: 3}
       propertyPath: speed

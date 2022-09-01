@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1231979062079459756, guid: 695c261d50c1a054e90f56658a6ec9ab, type: 3}
       propertyPath: m_Name
-      value: Cube
+      value: Cube_m_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 2985783261285146438, guid: 695c261d50c1a054e90f56658a6ec9ab, type: 3}
       propertyPath: m_RootOrder
@@ -136,7 +136,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 44308845657860879, guid: 0a7a7cdc21798e444a244b1eccbff739, type: 3}
       propertyPath: m_Name
-      value: Monkey
+      value: Monkey_m_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 233325018375248832, guid: 0a7a7cdc21798e444a244b1eccbff739, type: 3}
       propertyPath: m_RootOrder
@@ -274,7 +274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6818924669238379238, guid: 4b9f4b52fc24a5447a713b57bc442999, type: 3}
       propertyPath: m_Name
-      value: Banana
+      value: Banana_m_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 7410343027079138316, guid: 4b9f4b52fc24a5447a713b57bc442999, type: 3}
       propertyPath: m_RootOrder
@@ -372,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3740112317898018356, guid: 8c0b26ba2e5559844a91e694a04535fa, type: 3}
       propertyPath: m_Name
-      value: Triangle
+      value: Triangle_m_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 6699698151773968793, guid: 8c0b26ba2e5559844a91e694a04535fa, type: 3}
       propertyPath: m_RootOrder
@@ -454,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4034462500344588013, guid: aedbcb937b79415489d2b73ce0d135a5, type: 3}
       propertyPath: m_Name
-      value: Table
+      value: Table_m_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 5780283865271636143, guid: aedbcb937b79415489d2b73ce0d135a5, type: 3}
       propertyPath: originalPosition.x
@@ -552,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523607428065752838, guid: 37f98b3856ab9794bb324480566e6df9, type: 3}
       propertyPath: m_Name
-      value: Orange
+      value: Orange_m_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 7962076126327111286, guid: 37f98b3856ab9794bb324480566e6df9, type: 3}
       propertyPath: m_RootOrder
@@ -614,7 +614,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6348830217749478571, guid: caba560c63372ce47a32024ca20d3791, type: 3}
       propertyPath: m_Name
-      value: Grape
+      value: Grape_m_n_f_a
       objectReference: {fileID: 0}
     - target: {fileID: 6739859491211026173, guid: caba560c63372ce47a32024ca20d3791, type: 3}
       propertyPath: originalPosition.x
