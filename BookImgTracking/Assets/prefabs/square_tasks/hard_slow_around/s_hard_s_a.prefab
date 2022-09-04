@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3510665926798158225, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: originalPosition.z
-      value: -5
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 3769652141061600365, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: m_Name
@@ -603,6 +603,18 @@ PrefabInstance:
     - target: {fileID: 6579170855460250560, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579170855460250560, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579170855460250560, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6579170855460250560, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6579170855460250560, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -614,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579170855460250560, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6579170855460250560, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -662,7 +674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7901318320646382508, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}
       propertyPath: startPos.z
-      value: -5
+      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddcbd1178495494478a3a78a8d0813d7, type: 3}

@@ -252,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 206644612072057602, guid: d992794d6be4863469f4c3554970cf12, type: 3}
       propertyPath: originalPosition.z
-      value: -6
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 1680482021664523688, guid: d992794d6be4863469f4c3554970cf12, type: 3}
       propertyPath: m_Name
@@ -332,7 +332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5275630880545151788, guid: d992794d6be4863469f4c3554970cf12, type: 3}
       propertyPath: startPos.z
-      value: -6
+      value: -12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d992794d6be4863469f4c3554970cf12, type: 3}
