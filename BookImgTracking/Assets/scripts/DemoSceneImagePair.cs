@@ -43,6 +43,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
         ARTrackedImageManager m_TrackedImageManager;
         ARSession arSession;
         ARTrackedImage currentTrackedImage;
+        Boolean houseSoundWasPlayed = false;
+        DemoSceneSoundManager soundManager;
 
         [SerializeField]
         [Tooltip("Reference Image Library")]
@@ -95,6 +97,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                     Ray ray = arCamera.ScreenPointToRay(touch.position);
                     RaycastHit hitObject;
+                    
 
                     if (Physics.Raycast(ray, out hitObject))
                     {
@@ -103,33 +106,40 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                         if (hitObject.collider.gameObject.name.Equals("questionmark"))
                         {
-                            Debug.Log("kérdés");
+                            this.soundManager.playSoundOfQuestionmark();
                         }
 
                         if (hitObject.collider.gameObject.name.Equals("home_obj"))
                         {
-                            SceneManager.LoadScene(0);
-                            resetARSession();
+                            if (!this.houseSoundWasPlayed)
+                            {
+                                this.houseSoundWasPlayed = true;
+                                this.soundManager.playSoundOfHouse();
+                            }
+                            else
+                            {
+                                SceneManager.LoadScene(0);
+                                resetARSession();
+                            }
                         }
-
+                            
+                        Guid gameObjectKey;
 
                         if (prefabState != null)
                         {
-                            Guid key;
-
                             foreach (var kpv in m_PrefabsDictionary)
                             {
-                                if (kpv.Value.transform.Find(gameObject.name) != null)
-                                {
-                                    key = kpv.Key;
-                                    break;
+                                if (kpv.Value.Equals(gameObject.name)) {
+                                    Debug.Log("egyenlõek a nevek!");
                                 }
+                                gameObjectKey = kpv.Key;
                             }
-                            ChangeSelectedObject(prefabState, gameObject, key);
+
+                            ChangeSelectedObject(prefabState, gameObject, gameObjectKey);
                         }
                         else
                         {
-                            Debug.Log("null");
+                            Debug.Log("prefabState null!");
                         }
                     }
                 }
@@ -141,6 +151,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
             arSession = FindObjectOfType<ARSession>();
             arCamera = FindObjectOfType<Camera>();
+            this.soundManager = FindObjectOfType(typeof(DemoSceneSoundManager)) as DemoSceneSoundManager;
         }
 
         void OnEnable()
@@ -152,6 +163,38 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             m_TrackedImageManager.trackedImagesChanged -= OnTrackedImagesChanged;
         }
+
+        void Start() {
+            StartCoroutine(this.playIntroductoryInformation());
+        }
+
+        IEnumerator<WaitForSeconds> playIntroductoryInformation()
+        {
+            yield return new WaitForSeconds(5);
+
+            this.soundManager.playIntro();
+
+            yield return new WaitForSeconds(8);
+
+            this.soundManager.playSoundOfStructure();
+
+            yield return new WaitForSeconds(15);
+
+            this.soundManager.playSoundOfRule();
+
+            yield return new WaitForSeconds(15);
+
+            this.soundManager.playSoundOfHouse();
+
+            yield return new WaitForSeconds(15);
+
+            this.soundManager.playSoundOfQuestionmark();
+
+            yield return new WaitForSeconds(15);
+
+            this.soundManager.playSoundOfHowToPlay();
+        }
+
 
         void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
         {
@@ -168,7 +211,6 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     if (eventArgs.updated.Count > 1)
                     {
                         var trackedImg = trackedImage;
-                        resetARSession();
                         AssignPrefab(trackedImg);
                     }
                 }
@@ -198,39 +240,24 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
                 m_Instantiated[trackedImage.referenceImage.guid].SetActive(true);
             }
+
+            this.soundManager.playSoundOfHowToInteract();
         }
 
         void ChangeSelectedObject(PrefabState selected, GameObject gameObject, Guid key)
         {
-
             if (key != null)
             {
-                MeshRenderer objMesh = m_Instantiated[key].transform.Find(gameObject.name).GetComponent<MeshRenderer>();
+                Debug.Log("inst go name: " + m_Instantiated[key].gameObject.name);
+                Debug.Log("inst count: " + m_Instantiated.Count);
+                MeshRenderer objMesh = m_Instantiated[key].gameObject.GetComponent<MeshRenderer>();
+                
+                selected.isSelected = true;
+                objMesh.material.color = Color.green;
 
-                if (selected.isSelected != true)
-                {
-                    if (selected.thisIsTheGoodSolution == true)
-                    {
-                        selected.isSelected = true;
-                        objMesh.material.color = Color.green;
-                    }
-                    else
-                    {
-                        selected.isSelected = true;
-                        objMesh.material.color = Color.red;
+                this.soundManager.playSoundOfGoodWork();
 
-
-                        StartCoroutine(this.SetBackTheColor(objMesh, selected));
-                    }
-
-                    PlaySoundManager playSoundManager = FindObjectOfType(typeof(PlaySoundManager)) as PlaySoundManager; ; ;
-                    playSoundManager.playSound(selected.thisIsTheGoodSolution);
-                }
-                else
-                {
-                    selected.isSelected = false;
-                    objMesh.material.color = selected.originalColor;
-                }
+                StartCoroutine(this.playFurtherDescription());
             }
             else
             {
@@ -239,12 +266,18 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
         }
 
-        IEnumerator<WaitForSeconds> SetBackTheColor(MeshRenderer objMesh, PrefabState selected)
-        {
+        IEnumerator<WaitForSeconds> playFurtherDescription() {
             yield return new WaitForSeconds(5);
 
-            selected.isSelected = false;
-            objMesh.material.color = selected.originalColor;
+            this.soundManager.playSoundOfHowToSolve();
+
+            yield return new WaitForSeconds(10);
+
+            this.soundManager.playSoundOfCheckTask();
+
+            yield return new WaitForSeconds(15);
+
+            this.soundManager.playSoundOfEndOfIntro();
         }
 
         //UNITY_EDITOR

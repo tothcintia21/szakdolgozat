@@ -50,6 +50,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         private float speed;
         private Vector3 startPoint;
         private Vector3 endPoint;
+        private GameEndManager gameEndManager;
 
         [SerializeField]
         [Tooltip("Reference Image Library")]
@@ -113,11 +114,17 @@ namespace UnityEngine.XR.ARFoundation.Samples
                         GameObject gameObject = hitObject.collider.gameObject;
                         PrefabState prefabState = hitObject.transform.GetComponent<PrefabState>();
 
-                        Debug.Log("gameobject name" + gameObject.name);
-
                         if (hitObject.collider.gameObject.name.Equals("questionmark"))
                         {
-                            Debug.Log("kérdés");
+                            if (this.currentTrackedImage != null)
+                            {
+                                GetTaskText description = FindObjectOfType(typeof(GetTaskText)) as GetTaskText;
+                                string name = m_Instantiated[this.currentTrackedImage.referenceImage.guid].gameObject.name;
+                                description.playTaskDescriptiveText(name);
+                            }
+                            else {
+                                Debug.Log("Nincs még feladat!");
+                            }
                         }
 
                         if (hitObject.collider.gameObject.name.Equals("home_obj"))
@@ -133,13 +140,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                             foreach (var kpv in m_PrefabsDictionary)
                             {
-                                Debug.Log("kpv value: " + kpv.Value);
-                                Debug.Log("kpv key: " + kpv.Key);
-                                Debug.Log("find: " + kpv.Value.transform.Find(gameObject.name));
                                 if (kpv.Value.transform.Find(gameObject.name) != null)
                                 {
                                    key = kpv.Key;
-                                   Debug.Log("the key: " + key);
                                    break;
                                 }
                             }
@@ -159,6 +162,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             m_TrackedImageManager = GetComponent<ARTrackedImageManager>();
             arSession = FindObjectOfType<ARSession>();
             arCamera = FindObjectOfType<Camera>();
+            this.gameEndManager = FindObjectOfType<GameEndManager>();
         }
 
         void OnEnable()
@@ -223,6 +227,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
             if (key != null)
             {
                 MeshRenderer objMesh = m_Instantiated[key].transform.Find(gameObject.name).GetComponent<MeshRenderer>();
+                PlaySoundManager playSoundManager = FindObjectOfType(typeof(PlaySoundManager)) as PlaySoundManager;
 
                 if (selected.isSelected != true)
                 {
@@ -230,6 +235,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
                     {
                         selected.isSelected = true;
                         objMesh.material.color = Color.green;
+                        Debug.Log("numberof: ");
+                        Debug.Log(gameObject.GetComponentInParent<GameEndManager>().numberOfGoodAnswer);
+                        StartCoroutine(this.GameIsEnd(gameObject));
                     }
                     else {
                         selected.isSelected = true;
@@ -238,20 +246,28 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                         StartCoroutine(this.SetBackTheColor(objMesh, selected));
                     }
-
-                    PlaySoundManager playSoundManager = FindObjectOfType(typeof(PlaySoundManager)) as PlaySoundManager; ; ;
-                    playSoundManager.playSound(selected.thisIsTheGoodSolution);
                 }
                 else {
                     selected.isSelected = false;
                     objMesh.material.color = selected.originalColor;
                 }
+
+                playSoundManager.playSound(selected.thisIsTheGoodSolution);
             }
             else
             {
                 Debug.Log("key null!!");
             }
-            
+        }
+
+        IEnumerator<WaitForSeconds> GameIsEnd(GameObject gameObject)
+        {
+            yield return new WaitForSeconds(5);
+
+            Debug.Log(55555);
+            Debug.Log("manager: " + gameObject.GetComponentInParent<GameEndManager>());
+
+            gameObject.GetComponentInParent<GameEndManager>().checkGameEnd();
         }
 
         IEnumerator<WaitForSeconds> SetBackTheColor(MeshRenderer objMesh, PrefabState selected) {

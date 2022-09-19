@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PlaySoundManager: MonoBehaviour
 {
-    public AudioSource[] test1 = null;
+    public AudioSource[] soundsOfGoodWork = null;
+    public AudioSource[] soundsOfNeedToEncourage = null;
 
     public void playSound(bool isCorrect) {
-        //if (isCorrect)
-        
-        var randNumber = this.randInt(3);
-        test1[randNumber].Play();
-
-        //else
+       
+        if (isCorrect)
+        {
+            var randNumber = this.randInt(this.soundsOfGoodWork.Length);
+            soundsOfGoodWork[randNumber].Play();
+        }
+        else {
+            var randNumber = this.randInt(this.soundsOfNeedToEncourage.Length);
+            soundsOfNeedToEncourage[randNumber].Play();
+        }
     }
 
     public int randInt(int intervalEnd) {
