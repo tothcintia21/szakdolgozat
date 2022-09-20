@@ -248,10 +248,8 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             if (key != null)
             {
-                Debug.Log("inst go name: " + m_Instantiated[key].gameObject.name);
-                Debug.Log("inst count: " + m_Instantiated.Count);
                 MeshRenderer objMesh = m_Instantiated[key].gameObject.GetComponent<MeshRenderer>();
-                
+               
                 selected.isSelected = true;
                 objMesh.material.color = Color.green;
 

@@ -179,9 +179,9 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             foreach (ARTrackedImage trackedImage in eventArgs.added)
             {
+                currentTrackedImage = trackedImage;
                 AssignPrefab(trackedImage);
                 setPrefabPosition(trackedImage);
-                currentTrackedImage = trackedImage;
             }
 
             foreach (ARTrackedImage trackedImage in eventArgs.updated)
@@ -218,6 +218,13 @@ namespace UnityEngine.XR.ARFoundation.Samples
 
                 m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
                 m_Instantiated[trackedImage.referenceImage.guid].SetActive(true);
+            }
+
+            if (this.currentTrackedImage != null)
+            {
+                GetTaskText description = FindObjectOfType(typeof(GetTaskText)) as GetTaskText;
+                string name = m_Instantiated[this.currentTrackedImage.referenceImage.guid].gameObject.name;
+                description.playTaskDescriptiveText(name);
             }
         }
 
